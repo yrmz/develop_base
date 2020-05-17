@@ -1,6 +1,7 @@
 # 開発用の基盤
 ## Docker
 ### コマンド
+- 起動<br>
 `docker-compose up`
 
 ## フロントエンド
@@ -8,9 +9,9 @@
 - 言語：TypeScript
 - フレームワーク：React
 ### コマンド
-- テンプレート作成（コンポーネント）
+- テンプレート作成（コンポーネント）<br>
 `npm run create-react-component`
-- テンプレート作成（コンテナ）
+- テンプレート作成（コンテナ）<br>
 `npm run create-react-container`
 
 ## サーバーサイド

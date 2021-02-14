@@ -35,3 +35,15 @@ services:
     tty: true
     ports:
       - "3080:3000"
+  mysql:
+    build: ./db/ #Dockerfileからビルドすることを示す
+    volumes:
+      - ./mysql/db:/docker-entrypoint-initdb.d #初期データをマウントする場所
+    image: sample_db # イメージの名前
+    volumes: 
+      - ./db/initdb.d:/docker-entrypoint-initdb.d
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_DATABASE=sample_db
+      - MYSQL_ROOT_PASSWORD=root #コンテナ内のMySQLを起動する際のパスワードを設定
